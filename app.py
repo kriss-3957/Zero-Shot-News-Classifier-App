@@ -22,12 +22,13 @@ sample_rss_feeds = [
 ]
 
 # Loading the locally saved model
-local_model_name = "local_model_weights"
-tokenizer = AutoTokenizer.from_pretrained(local_model_name)
-model = AutoModelForSequenceClassification.from_pretrained(local_model_name)
+# local_model_name = "local_model_weights"
+# tokenizer = AutoTokenizer.from_pretrained(local_model_name)
+# model = AutoModelForSequenceClassification.from_pretrained(local_model_name)
 
 # Creating a zero-shot classification pipeline with an explicit tokenizer
-classifier = pipeline("zero-shot-classification", model=model, tokenizer=tokenizer)
+#classifier = pipeline("zero-shot-classification", model=model, tokenizer=tokenizer)
+classifier = pipeline("zero-shot-classification")
 
 # Patching the event loop for Flask
 nest_asyncio.apply()
