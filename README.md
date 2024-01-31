@@ -28,6 +28,7 @@ This is an End-to-End News Category Classification Application, designed to coll
 
 Programming Language: Python
 Libraries: Flask, Feedparser, Transformers (HuggingFace),Asyncio, Matplotlib
+
 Database: sqlite3
 
 
