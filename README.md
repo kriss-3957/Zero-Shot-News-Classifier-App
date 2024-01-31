@@ -39,9 +39,9 @@ Database: sqlite3
 1. Clone the GitHub repository:
 
 ```
-git clone https://github.com/your-username/news-classification-app.git
+git clone https://github.com/kriss-3957/Zero-Shot-News-Classifier-App/tree/main
 
-cd news-classification-app
+cd Zero-Shot-News-Classifier-App
 ```
 2. Install dependencies:
 For your convenience a requirements.txt is provided, which allows you to install them by using pip:
