@@ -1,10 +1,9 @@
-
 # Zero-Shot News Classifier Application
 
 ## Table of Contents
 
 - [Overview](#overview)
-- [App Features](#app-features-:)
+- [App Features](#app-features)
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Application Logic](#application-logic)
@@ -15,7 +14,7 @@
 
 This is an End-to-End News Category Classification Application, designed to collect news articles from various RSS feeds, store them into a database, and classify them into predefined categories. The categories include Terrorism/Protest/Political Unrest/Riot, Positive/Uplifting, Natural Disasters, and Others. The classified data is then outputed as a sql dump by the application.
 
-## App Features :
+## App Features 
 
 - Parsing of RSS feeds to extract news article information.
 - Database storage to store parsed news articles without duplicates.
