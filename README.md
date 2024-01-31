@@ -75,6 +75,9 @@ http://127.0.0.1:5000/
 
 ## App Demo :
 
+https://github.com/kriss-3957/Zero-Shot-News-Classifier-App/assets/83901012/09a6e422-e1ba-43d8-a0ef-485e1875ecbd
+
+
 
 
 
