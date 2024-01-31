@@ -177,4 +177,4 @@ async def index():
     return render_template('index.html', rss_feeds=sample_rss_feeds)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', debug=True)
