@@ -9,7 +9,8 @@ import matplotlib.pyplot as plt
 from io import BytesIO
 import base64
 
-app = Flask(__name__)
+# app = Flask(__name__)
+app = Flask(__name__, template_folder='templates')
 
 # List of RSS feed links
 sample_rss_feeds = [
