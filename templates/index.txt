@@ -1,0 +1,107 @@
+<!-- CSS -->
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        color: #333;
+        background: #f1f1f1;
+        font-family: Helvetica, Arial, sans-serif;
+        padding: 20px;  /* Add padding for better spacing */
+    }
+
+    main {
+        box-sizing: border-box;
+        padding: 0.5em;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 800px; /* Increase max-width for better readability */
+        background: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+        margin-top: 20px;  /* Add margin at the top */
+    }
+
+    h1 {
+        font-size: 24px;
+        margin: 20px 0;  /* Add margin for better spacing */
+        color: #333;
+    }
+
+    form {
+        margin-bottom: 20px;  /* Add margin at the bottom */
+    }
+
+    label {
+        display: block;
+        margin: 10px 0;  /* Add margin for better spacing */
+        font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="submit"],
+    input[type="checkbox"] {
+        margin: 5px 0;  /* Add margin for better spacing */
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+    }
+
+    input[type="submit"] {
+        background: #4CAF50;
+        color: white;
+        cursor: pointer;
+    }
+
+    input[type="checkbox"] {
+        margin-right: 5px;  /* Add margin for better spacing */
+    }
+
+    h2 {
+        font-size: 20px;
+        margin-top: 20px;  /* Add margin at the top */
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        margin-top: 20px;  /* Add margin at the top */
+    }
+</style>
+
+<!-- Index -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Article Categorization App</title>
+</head>
+<body>
+    <main>
+        <h1>News Article Categorization App</h1>
+
+        <form method="post">
+            <label for="rss_link">Select or Add RSS Feeds:</label>
+            {% for feed in rss_feeds %}
+                <input type="checkbox" name="rss_link" value="{{ feed }}"> {{ feed }}<br>
+            {% endfor %}
+            <input type="text" name="custom_rss_link" placeholder="Enter custom RSS feed URL">
+            <input type="submit" value="Fetch Articles">
+        </form>
+
+        {% if df_html %}
+            <h2>Category Frequency Plot</h2>
+            <img src="data:image/png;base64,{{ img_base64 }}" alt="Category Frequency Plot">
+
+            <h2>Articles DataFrame</h2>
+            {{ df_html|safe }}
+   
+        {% endif %}
+    </main>
+</body>
+</html>
