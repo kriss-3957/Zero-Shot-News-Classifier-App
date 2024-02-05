@@ -29,7 +29,22 @@ sample_rss_feeds = [
 
 # Creating a zero-shot classification pipeline with an explicit tokenizer
 #classifier = pipeline("zero-shot-classification", model=model, tokenizer=tokenizer)
-classifier = pipeline("zero-shot-classification")
+
+# classifier = pipeline("zero-shot-classification")
+
+
+
+## We're using Alberta instead of the BART Classifier used above as it is much lightweight and may be able to be deployed using free resources only
+## This drastically improves the memory utilization from 3000 MiB to 60 MiB
+
+# Load ALBERT model and tokenizer
+albert_model_name = "textattack/albert-base-v2-imdb"
+albert_tokenizer = AutoTokenizer.from_pretrained(albert_model_name)
+albert_model = AutoModelForSequenceClassification.from_pretrained(albert_model_name)
+
+# Create a zero-shot classification pipeline with ALBERT
+classifier = pipeline("zero-shot-classification", model=albert_model, tokenizer=albert_tokenizer)
+
 
 # Patching the event loop for Flask
 nest_asyncio.apply()
