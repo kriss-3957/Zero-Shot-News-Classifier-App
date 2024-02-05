@@ -1,8 +1,5 @@
 {
   "version": 2,
-// We're commenting out the below build settings as it's conflicting with the build requirements of our current app, doing this will let vercel configure the build settings by itself.
-  // "builds": [{ "src": "app.py", "use": "@vercel/python" }],
-  // "builds": [{ "src": "app.py", "use": "@vercel/python" }],
   "routes": [
     {
       "src": "/(.*)",
