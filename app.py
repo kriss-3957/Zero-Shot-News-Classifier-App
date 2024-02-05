@@ -176,6 +176,8 @@ async def index():
         return render_template('index.html', df_html=df_html, img_base64=img_base64, rss_feeds=sample_rss_feeds)
 
     return render_template('index.html', rss_feeds=sample_rss_feeds)
+    
+## In order to deploy on the vercel server the app needs to be run from the 'wsgi.py' file, so we comment out the below lines from here and move it to the wsgi.py file instead
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', debug=True)
+# if __name__ == '__main__':
+#     app.run(host='0.0.0.0', debug=True)
