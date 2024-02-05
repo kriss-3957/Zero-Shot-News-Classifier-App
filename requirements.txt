@@ -7,4 +7,4 @@ transformers==4.30.1
 gunicorn==20.1.0
 # Specific version of TensorFlow
 tensorflow>=2.0,<3.0
-Werkzeug>=3.0.0
+Werkzeug>=3.0.0    ## Vercel specific library, often required to run the flask app in Vercel deployment platfor, the version should match the version of Flask used
