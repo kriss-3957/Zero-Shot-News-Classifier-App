@@ -35,7 +35,7 @@ sample_rss_feeds = [
 
 
 ## We're using Alberta instead of the BART Classifier used above as it is much lightweight and may be able to be deployed using free resources only
-## This drastically improves the memory utilization from 3000 MiB to 60 MiB
+## This drastically improves the memory utilization from 3000 MiB to 600 MiB
 
 # Load ALBERT model and tokenizer
 albert_model_name = "textattack/albert-base-v2-imdb"
