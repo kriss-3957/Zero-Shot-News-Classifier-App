@@ -5,7 +5,7 @@ nest_asyncio==1.5.6
 pandas==2.0.1
 transformers==4.30.1
 tensorflow==2.15.0
-protobuf==3.20.0
+protobuf==3.20.0  # required to run Alberta Model
 sentencepiece==0.1.96  ## to use the ALBERTA Model
 gunicorn==20.1.0
 # Specific version of TensorFlow
